@@ -81,21 +81,21 @@
            #binding-cells = <0>;
            bindings = <&kp MINUS>, <&kp UNDER>;
         };
-        space_tab: space_or_tab {
-           compatible = "zmk,behavior-tap-dance";
-           #binding-cells = <0>;
-           bindings = <&kp SPACE>, <&kp TAB>;
-        };
-
-        gui_altgr: win_or_altgr {
+        
+        spc_altgr: space_or_altgr {
            compatible = "zmk,behavior-hold-tap";
            #binding-cells = <0>;
-           flavor = "balanced";              // Puedes cambiar por "hold-preferred"
+           flavor = "balanced";              // Podés usar "hold-preferred" si querés que priorice AltGr
            tapping-term-ms = <200>;
            quick-tap-ms = <175>;
-           bindings = <&kp LGUI>, <&kp RALT>;
-       };
+           bindings = <&kp SPACE>, <&kp RALT>;
+        };
 
+        win_tab: win_or_tab {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           bindings = <&kp LGUI>, <&kp TAB>;
+        };
         enter_ctrl: enter_or_ctrl {
            compatible = "zmk,behavior-hold-tap";
            #binding-cells = <0>;
@@ -129,7 +129,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon   &qmrk_excl
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                &shift_caps     &mo NUM     &enter_ctrl        &space_tab    &mo NAV       &gui_altgr
+                                &shift_caps     &mo NUM     &enter_ctrl        &spc_altgr   &mo NAV       &win_tab
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
