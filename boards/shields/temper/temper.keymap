@@ -97,17 +97,6 @@
            bindings = <&kp LGUI>, <&kp TAB>;
         };
 
-        enter_ctrl: enter_or_ctrl {
-           compatible = "zmk,behavior-hold-tap";
-           #binding-cells = <0>;
-           flavor = "balanced";              // o "hold-preferred" si querés que sea más fácil mantenerlo
-           tapping-term-ms = <200>;         // tiempo para detectar si fue tap
-           quick-tap-ms = <175>;            // opcional: tiempo para distinguir tap rápido
-           bindings = <&kp ENTER>, <&kp LCTRL>;
-        };
-
-
-
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -121,7 +110,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon   &qmrk_excl
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                   &kp LSHFT     &mo NUM     &enter_ctrl         &kp SPACE      &mo NAV      &kp LGUI
+                                   &kp LSHFT     &mo NUM    &mt LCTL ENTER      &kp SPACE      &mo NAV      &win_tab
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -134,7 +123,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &qmrk_excl      &kp Q         &kp J         &kp K         &kp X              &kp B       &kp M        &kp W        &kp V          &kp Z
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &kp LSHFT      &mo NUM     &enter_ctrl      &kp SPACE       &mo NAV     &kp LGUI
+                                  &kp LSHFT      &mo NUM    &mt LCTL ENTER       &kp SPACE     &mo NAV      &win_tab
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
