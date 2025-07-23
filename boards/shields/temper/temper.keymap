@@ -96,6 +96,32 @@
            #binding-cells = <0>;
            bindings = <&kp LGUI>, <&kp TAB>;
         };
+        win_tab: win_or_tab {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           bindings = <&kp LGUI>, <&kp TAB>;
+        };
+        lt_gt: lt_or_gt {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           bindings = <&kp LT>, <&kp GT>;
+        };
+
+        tap_bkts: tap_bkts {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           bindings = <&kp LBKT>, <&kp RBKT>;
+        }; 
+        tap_braces: tap_braces {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           bindings = <&kp LBRACE>, <&kp RBRACE>;
+        };
+        tap_parens: tap_parens {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           bindings = <&kp LPAR>, <&kp RPAR>;
+        };
 
     };
         keymap {
@@ -130,13 +156,13 @@
                 num_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-      &kp TILDE       &kp AT       &kp LBRC      &kp RBRC     &kp PRCNT          &kp STAR       &kp N7        &kp N8        &kp N9      &kp MINUS
+      &kp N1          &kp N2        &kp N3        &kp N4        &kp N5          &kp N6          &kp N7        &kp N8        &kp N9      &kp N0
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp CARET      &kp HASH      &kp LPAR      &kp RPAR      &kp DLLR         &kp UNDER       &kp N4        &kp N5        &kp N6      &kp PLUS
+      &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT        &kp CARET       &kp AMPS       &kp STAR      &tap_bkts   &slh_morph
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &amps_morph     &kp LT       &kp LBKT      &kp RBKT       &kp GT          &slh_morph      &kp N1        &kp N2        &kp N3      &kp EQUAL
+      &kp EQUAL      &kp GRAVE     &kp TILDE    &kp TILDE      &kp PLUS         &dash_dance    &lt_gt      &tap_parens   &tap_braces     &kp PIPE
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                    ______        ______        ______            &kp N0        ______        ______
+                                  &kp LSHIFT    ______      &mt LCTL ENTER    &mt RALT SPACE    &mo NAV     ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
