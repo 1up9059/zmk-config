@@ -46,28 +46,24 @@
             mods = <(MOD_LSFT)>;
         };
         comma_semi: comma_semi {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&kp COMMA>, <&kp DOT>;
         };
         dot_colon: dot_colon {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&kp COLON>, <&kp SEMI>;
         };
         qmrk_excl: qmrk_excl {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
-            mods = <(MOD_LSFT)>;
         };
         slh_morph: slh_morph {
-            compatible = "zmk,behavior-mod-morph";
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp BSLH>;
-            mods = <(MOD_LSFT)>;
         };
         amps_morph: amps_morph {
             compatible = "zmk,behavior-mod-morph";
@@ -75,6 +71,18 @@
             bindings = <&kp AMPS>, <&kp PIPE>;
             mods = <(MOD_LSFT)>;
         };
+        quote_dance: quote_tapdance {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           bindings = <&kp SQT>, <&kp DQT>;
+        };
+        dash_dance: dash_tapdance {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           bindings = <&kp MINUS>, <&kp UNDER>;
+        };
+
+
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -84,9 +92,9 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U        &kp I         &kp O         &kp P   
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp A         &kp S         &kp D         &kp E         &kp G             &kp H         &kp J        &kp K         &kp L         &bspc_del
+        &kp A         &kp S         &kp D         &kp E         &kp G             &kp H         &kp J        &kp K         &kp L       &quote_dance
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon    &slh_morph
+        &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon   &dash_dance
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                    &kp LGUI      &mo NUM     &smart_shft        &kp SPACE      &mo NAV     &to DEFAULT
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
