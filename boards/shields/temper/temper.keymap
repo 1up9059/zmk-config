@@ -103,7 +103,7 @@
            flavor = "balanced";
            tapping-term-ms = <200>;
            quick-tap-ms = <175>;
-           bindings = <&kp ENTER &kp LCTRL>;
+           bindings = <&kp RET &kp LCTRL>;
        };
 
        shift_caps: shift_or_capslock {
