@@ -111,7 +111,7 @@
         tap_braces: tap_braces {
            compatible = "zmk,behavior-tap-dance";
            #binding-cells = <0>;
-           bindings = <&kp LBRACE &kp RBRACE>;
+           bindings = <&kp LBRACE>, <&kp RBRACE>;
         };
         tap_parens: tap_parens {
            compatible = "zmk,behavior-tap-dance";
