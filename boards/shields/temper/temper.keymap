@@ -81,6 +81,38 @@
            #binding-cells = <0>;
            bindings = <&kp MINUS>, <&kp UNDER>;
         };
+        space_tab: space_or_tab {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           bindings = <&kp SPACE>, <&kp TAB>;
+        };
+
+        gui_altgr: win_or_altgr {
+           compatible = "zmk,behavior-hold-tap";
+           #binding-cells = <0>;
+           flavor = "balanced";              // Puedes cambiar por "hold-preferred"
+           tapping-term-ms = <200>;
+           quick-tap-ms = <175>;
+           bindings = <&kp LGUI>, <&kp RALT>;
+       };
+        enter_ctrl: enter_or_ctrl {
+           compatible = "zmk,behavior-hold-tap";
+           #binding-cells = <0>;
+           flavor = "balanced";
+           tapping-term-ms = <200>;
+           quick-tap-ms = <175>;
+           bindings = <&kp ENTER>, <&kp LCTRL>;
+       };
+
+       shift_caps: shift_or_capslock {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <0>;
+          flavor = "balanced";              // o "hold-preferred"
+          tapping-term-ms = <200>;
+          quick-tap-ms = <175>;
+          bindings = <&kp CAPSLOCK>, <&kp LSHFT>;
+       };
+
 
 
     };
@@ -94,9 +126,9 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp A         &kp S         &kp D         &kp E         &kp G             &kp H         &kp J        &kp K         &kp L       &quote_dance
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon   &dash_dance
+        &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon   &qmrk_excl
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                   &kp LGUI      &mo NUM     &smart_shft        &kp SPACE      &mo NAV     &to DEFAULT
+                                &shift_caps     &mo NUM     &enter_ctrl        &space_tab    &mo NAV     &gui_altgr
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
