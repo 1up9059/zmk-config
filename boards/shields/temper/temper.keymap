@@ -95,6 +95,7 @@
            quick-tap-ms = <175>;
            bindings = <&kp LGUI>, <&kp RALT>;
        };
+
         enter_ctrl: enter_or_ctrl {
            compatible = "zmk,behavior-hold-tap";
            #binding-cells = <0>;
@@ -141,7 +142,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &qmrk_excl      &kp Q         &kp J         &kp K         &kp X              &kp B       &kp M        &kp W        &kp V          &kp Z
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &shift_caps     &mo NUM     &enter_ctrl        &space_tab    &mo NAV       &gui_altgr
+                                  &shift_caps     &mo NUM     &enter_ctrl        &space_tab    &mo NAV      &gui_altgr
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
