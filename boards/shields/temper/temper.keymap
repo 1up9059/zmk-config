@@ -33,69 +33,70 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
+
         super_bspc: super_backspace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         smart_shft: smart_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&caps_word>;
             mods = <(MOD_LSFT)>;
         };
+
         comma_semi: comma_semi {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp DOT>;
         };
+
         dot_colon: dot_colon {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp SEMI>;
         };
+
         qmrk_excl: qmrk_excl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp EXCL>;
         };
+
         slh_morph: slh_morph {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp BSLH>;
         };
+
         amps_morph: amps_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp AMPS>, <&kp PIPE>;
             mods = <(MOD_LSFT)>;
         };
+
         quote_dance: quote_tapdance {
            compatible = "zmk,behavior-tap-dance";
            #binding-cells = <0>;
            bindings = <&kp SQT>, <&kp DQT>;
         };
+
         dash_dance: dash_tapdance {
            compatible = "zmk,behavior-tap-dance";
            #binding-cells = <0>;
            bindings = <&kp MINUS>, <&kp UNDER>;
         };
-        
-        spc_altgr: space_or_altgr {
-           compatible = "zmk,behavior-hold-tap";
-           #binding-cells = <0>;
-           flavor = "balanced";              // Podés usar "hold-preferred" si querés que priorice AltGr
-           tapping-term-ms = <200>;
-           quick-tap-ms = <175>;
-           bindings = <&kp SPACE>, <&kp RALT>;
-        };
-
+      
         win_tab: win_or_tab {
            compatible = "zmk,behavior-tap-dance";
            #binding-cells = <0>;
            bindings = <&kp LGUI>, <&kp TAB>;
         };
+
         enter_ctrl: enter_or_ctrl {
            compatible = "zmk,behavior-hold-tap";
            #binding-cells = <0>;
@@ -129,7 +130,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon   &qmrk_excl
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                &shift_caps     &mo NUM     &enter_ctrl        &spc_altgr     &mo NAV       &win_tab
+                                &shift_caps     &mo NUM     &enter_ctrl        &kp SPACE     &mo NAV        &win_tab
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -142,7 +143,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &qmrk_excl      &kp Q         &kp J         &kp K         &kp X              &kp B       &kp M        &kp W        &kp V          &kp Z
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &shift_caps     &mo NUM     &enter_ctrl        &spc_altgr    &mo NAV     &win_tab
+                                  &shift_caps     &mo NUM     &enter_ctrl        &kp SPACE    &mo NAV       &win_tab
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
