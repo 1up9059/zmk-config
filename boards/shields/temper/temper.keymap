@@ -103,7 +103,7 @@
            flavor = "balanced";
            tapping-term-ms = <200>;
            quick-tap-ms = <175>;
-           bindings = <&kp ENTER>, <&kp LCTRL>;
+           bindings = <&kp ENTER &kp LCTRL>;
        };
 
        shift_caps: shift_or_capslock {
@@ -112,7 +112,16 @@
           flavor = "balanced";              // o "hold-preferred"
           tapping-term-ms = <200>;
           quick-tap-ms = <175>;
-          bindings = <&kp CAPSLOCK>, <&kp LSHFT>;
+          bindings = <&kp CAPSLOCK &kp LSHFT>;
+       };
+
+       space_or_altgr: space_or_altgr {
+         compatible = "zmk,behavior-hold-tap";
+         #binding-cells = <0>;
+         flavor = "balanced";
+         tapping-term-ms = <200>;
+         quick-tap-ms = <175>;
+         bindings = <&kp SPACE &kp RALT>;
        };
 
 
@@ -130,7 +139,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M      &comma_semi    &dot_colon   &qmrk_excl
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                &shift_caps     &mo NUM     &enter_ctrl        &kp SPACE     &mo NAV        &win_tab
+                                &shift_caps     &mo NUM     &enter_ctrl      &space_or_altgr   &mo NAV        &win_tab
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
@@ -143,7 +152,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &qmrk_excl      &kp Q         &kp J         &kp K         &kp X              &kp B       &kp M        &kp W        &kp V          &kp Z
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                  &shift_caps     &mo NUM     &enter_ctrl        &kp SPACE    &mo NAV       &win_tab
+                                  &shift_caps     &mo NUM     &enter_ctrl    &space_or_altgr    &mo NAV       &win_tab
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };
