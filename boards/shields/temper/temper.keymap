@@ -51,13 +51,13 @@
         comma_semi: comma_semi {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp DOT>;
+            bindings =  <&kp DOT>, <&kp COLON>;
         };
 
         dot_colon: dot_colon {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp COLON>, <&kp SEMI>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
         };
 
         qmrk_excl: qmrk_excl {
