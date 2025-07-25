@@ -178,12 +178,6 @@
            key-positions = <23 24>; // posiciones físicas de las teclas K e L
            bindings = <&kp  EQUAL>;  // "="
         };
-        equal_combo {
-           timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <23 24>; // posiciones físicas de las teclas K e L
-           bindings = <&kp  EQUAL>;  // "="
-        };
-
         del_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
            key-positions = <18 19>; // posiciones físicas de las teclas K e L
@@ -194,16 +188,16 @@
            key-positions = <0 1>; // posiciones físicas de las teclas K e L
            bindings = <&kp  FSLH>;  // "SLASH"
         };
-        slash_combo {
+        backslash_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
            key-positions = <10 11>; // posiciones físicas de las teclas K e L
-           bindings = <&kp  BSLH>;  // "BACKSPACE"
+           bindings = <&kp  BSLH>;  // "backslash"
         };
 
         pipe_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
            key-positions = <20 21>; // posiciones físicas de las teclas K e L
-           bindings = <&kp  PIPE>;  // "BACKSPACE"
+           bindings = <&kp  PIPE>;  // "backspace"
         };
 
 
