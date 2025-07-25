@@ -153,6 +153,60 @@
            key-positions = <27 28>; // posiciones físicas de las teclas K e L
            bindings = <&kp  RBRC>;  // "}"
         };
+        open_lt_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <1 2>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  LT>;  // "<"
+        };
+        close_lt_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <2 3>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  GT>;  // ">"
+        };
+        sum_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <3 4>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  PLUS>;  // "+"
+        };
+        minus_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <13 14>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  MINUS>;  // "-"
+        };
+        equal_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <23 24>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  EQUAL>;  // "="
+        };
+        equal_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <23 24>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  EQUAL>;  // "="
+        };
+
+        del_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <18 19>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  BSPC>;  // "BACKSPACE"
+        };
+        slash_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <0 1>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  FSLH>;  // "SLASH"
+        };
+        slash_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <10 11>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  BSLH>;  // "BACKSPACE"
+        };
+
+        pipe_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <20 21>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  PIPE>;  // "BACKSPACE"
+        };
+
+
 
 
       };
