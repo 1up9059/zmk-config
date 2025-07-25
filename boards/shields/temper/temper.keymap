@@ -143,7 +143,17 @@
            key-positions = <17 18>; // posiciones físicas de las teclas K e L
            bindings = <&kp  RBKT>;  // "]"
         };
-  
+        OPEN_brc_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <26 27>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  LBRC>;  // "{"
+        };
+        close_brc_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <27 28>; // posiciones físicas de las teclas K e L
+           bindings = <&kp  RBRC>;  // "}"
+        };
+
 
       };
 
@@ -196,11 +206,11 @@
                 nav_layer {
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        ______        ______        ______        ______        ______          &kp K_REDO     ______       ______        ______      ______
+       &kp ESC        ______        ______        ______        ______          &kp K_REDO     ______       ______        ______      ______
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &kp TAB      &sk LSHFT      &sk LCTRL      &sk LALT       &sk LGUI         &kp HOME      &kp END         &kp UP        &gresc       &kp BSPC
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &kp K_UNDO   &kp K_CUT      &kp K_COPY     &kp K_PASTE     &kp DEL          ______      &kp LEFT      &kp DOWN      &kp RIGHT        ______
+      &kp K_UNDO   &kp K_CUT      &kp K_COPY     &kp K_PASTE    &kp DEL          ______      &kp LEFT      &kp DOWN      &kp RIGHT        ______
 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                     ______        &mo NUM        ______            ______        ______        ______
 //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
