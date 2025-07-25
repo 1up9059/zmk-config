@@ -140,12 +140,12 @@
         };
         close_lbkt_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <17 18>; // posiciones físicas de las teclas K e L
+           key-positions = <17 18>; // posiciones físicas de las teclas semicolom e dot
            bindings = <&kp  RBKT>;  // "]"
         };
         OPEN_brc_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <26 27>; // posiciones físicas de las teclas K e L
+           key-positions = <26 27>; // posiciones físicas de las teclas M e secolom
            bindings = <&kp  LBRC>;  // "{"
         };
         close_brc_combo {
@@ -155,48 +155,48 @@
         };
         open_lt_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <1 2>; // posiciones físicas de las teclas K e L
+           key-positions = <1 2>; // posiciones físicas de las teclas W e E
            bindings = <&kp  LT>;  // "<"
         };
         close_lt_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <2 3>; // posiciones físicas de las teclas K e L
+           key-positions = <2 3>; // posiciones físicas de las teclas E e R
            bindings = <&kp  GT>;  // ">"
         };
         sum_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <3 4>; // posiciones físicas de las teclas K e L
+           key-positions = <3 4>; // posiciones físicas de las teclas R e T
            bindings = <&kp  PLUS>;  // "+"
         };
         minus_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <13 14>; // posiciones físicas de las teclas K e L
+           key-positions = <13 14>; // posiciones físicas de las teclas F e G
            bindings = <&kp  MINUS>;  // "-"
         };
         equal_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <23 24>; // posiciones físicas de las teclas K e L
+           key-positions = <23 24>; // posiciones físicas de las teclas V e B
            bindings = <&kp  EQUAL>;  // "="
         };
         del_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <8 9>; // posiciones físicas de las teclas K e L
+           key-positions = <8 9>; // posiciones físicas de las teclas P e QUOT
            bindings = <&kp  BSPC>;  // "BACKSPACE"
         };
         slash_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <0 1>; // posiciones físicas de las teclas K e L
+           key-positions = <5 6>; // posiciones físicas de las teclas Y e U
            bindings = <&kp  FSLH>;  // "SLASH"
         };
         backslash_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <10 11>; // posiciones físicas de las teclas K e L
+           key-positions = <15 16>; // posiciones físicas de las teclas H e J
            bindings = <&kp  BSLH>;  // "backslash"
         };
 
         pipe_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <20 21>; // posiciones físicas de las teclas K e L
+           key-positions = <25 26>; // posiciones físicas de las teclas N e M
            bindings = <&kp  PIPE>;  // "backspace"
         };
 
