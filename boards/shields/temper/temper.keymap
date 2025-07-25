@@ -120,9 +120,26 @@
            bindings = <&kp LBRC>, <&kp RBRC>;
         }; 
 
+    combos {
+        compatible = "zmk,combos";
+
+        open_paren_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <6 7>; // posiciones físicas de las teclas U e I
+           bindings = <&kp  LPAR>;  // LS(9) = Shift + 9 = "("
+        };
+        close_paren_combo {
+           timeout-ms = <30>; // tiempo entre presiones (opcional)
+           key-positions = <7 8>; // posiciones físicas de las teclas U e I
+           bindings = <&kp  RPAR>;  // LS(9) = Shift + 9 = "("
+        };
+  
+
+      };
 
 
-    };
+
+    };//final de todo
         keymap {
                 compatible = "zmk,keymap";
 
