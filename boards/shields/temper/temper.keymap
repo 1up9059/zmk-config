@@ -180,7 +180,7 @@
         };
         del_combo {
            timeout-ms = <30>; // tiempo entre presiones (opcional)
-           key-positions = <8 9>; // posiciones físicas de las teclas K e L
+           key-positions = <18 19>; // posiciones físicas de las teclas K e L
            bindings = <&kp  BSPC>;  // "BACKSPACE"
         };
         slash_combo {
